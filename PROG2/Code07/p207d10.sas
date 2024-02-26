@@ -1,0 +1,11 @@
+libname orion "C:\Users\Morgan31955\Desktop\2018\UCFDocuments\STA5104\SAS_PG02\SASData_USED";
+data charity;   
+   set orion.employee_donations;
+   keep employee_id qtr1-qtr4; 
+   Qtr1=Qtr1*1.25;  
+   Qtr2=Qtr2*1.25;
+   Qtr3=Qtr3*1.25;         
+   Qtr4=Qtr4*1.25;
+run;
+proc print data=charity noobs;
+run;
